@@ -1,0 +1,37 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "fis:CreateExperimentTemplate",
+                "fis:UpdateExperimentTemplate",
+                "fis:StartExperiment",
+                "fis:StopExperiment",
+                "fis:GetExperiment",
+                "fis:GetExperimentTemplate",
+                "fis:ListExperiments",
+                "fis:ListExperimentTemplates",
+                "fis:TagResource",
+                "fis:UntagResource"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:GetRole",
+                "iam:PassRole"
+            ],
+            "Resource": "arn:aws:iam::*:role/FIS-Service-Role*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudwatch:GetMetricData",
+                "cloudwatch:ListMetrics"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
